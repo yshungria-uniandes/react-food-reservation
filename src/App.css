@@ -1,0 +1,169 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+    color: #343a40;
+    line-height: 1.6;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Main Container */
+  .container {
+    max-width: 1200px;
+    width: 90%;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  /* Header */
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #6c63ff;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(108, 99, 255, 0.3);
+  }
+  
+  /* Sections */
+  .menu, .cart, .reservation-form {
+    margin-bottom: 30px;
+  }
+  
+  .menu h2, .cart h2, .reservation-form h2 {
+    color: #495057;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #6c63ff;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  /* Lists */
+  .menu ul, .cart ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu li, .cart li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid #e9ecef;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .menu li:hover, .cart li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  }
+  
+  .menu li span, .cart li span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #495057;
+  }
+  
+  .menu li span.important, .cart li span.important {
+    font-weight: 700;
+    color: #6c63ff;
+  }
+  
+  /* Buttons */
+  button {
+    background: #6c63ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background: #5548c8;
+    transform: scale(1.05);
+  }
+  
+  button:disabled {
+    background: #adb5bd;
+    cursor: not-allowed;
+  }
+  
+  /* Empty Cart Message */
+  .cart p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #868e96;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+  /* Reservation Form */
+  .reservation-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .reservation-form input, 
+  .reservation-form button {
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 1px solid #dee2e6;
+    font-size: 1rem;
+  }
+  
+  .reservation-form input:focus {
+    border-color: #6c63ff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.3);
+  }
+  
+  .reservation-form button {
+    background: linear-gradient(to right, #6c63ff, #4b40cc);
+    font-size: 1rem;
+  }
+  
+  .reservation-form button:hover {
+    background: linear-gradient(to right, #5548c8, #3d34a3);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .menu li, .cart li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .menu button, .cart button {
+      margin-top: 10px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  

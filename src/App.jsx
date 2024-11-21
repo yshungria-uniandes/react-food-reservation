@@ -3,6 +3,9 @@ import Menu from "./components/Menu";
 import Cart from "./components/Cart";
 import ReservationForm from "./components/ReservationForm";
 
+// estilos  de la aplicacion
+
+
 function App() {
   const [cart, setCart] = useState([]);
 

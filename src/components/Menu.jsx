@@ -1,25 +1,25 @@
 import React from "react";
 
-const menuItems = [
-  { id: 1, name: "Pizza", price: 10 },
-  { id: 2, name: "Burger", price: 8 },
-  { id: 3, name: "Pasta", price: 12 },
-];
+function Menu({ addToCart }) {
+  const menuItems = [
+    { id: 1, name: "Pizza Margarita", price: 12 },
+    { id: 2, name: "Hamburguesa Especial", price: 15 },
+    { id: 3, name: "Sushi Rolls", price: 20 },
+  ];
 
-const Menu = ({ addToCart }) => {
   return (
     <div>
-      <h2>Menu</h2>
+      <h2>Menú</h2>
       <ul>
         {menuItems.map((item) => (
           <li key={item.id}>
-            {item.name} - ${item.price}
-            <button onClick={() => addToCart(item)}>Add to Cart</button>
+            <span>{item.name} - ${item.price}</span>
+            <button onClick={() => addToCart(item)}>Añadir</button>
           </li>
         ))}
       </ul>
     </div>
   );
-};
+}
 
 export default Menu;
